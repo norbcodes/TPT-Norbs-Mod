@@ -1,127 +1,48 @@
-The Powder Toy - February 2025
-==========================
+# Norb's Mod for the Powder Toy
 
-Get the latest version [from the Powder Toy website](https://powdertoy.co.uk/Download.html).
+Hello! This is a little mod i'm making for the amazing game [The Powder Toy](https://powdertoy.co.uk/Download.html). This game has been my favorite sandbox simulation game since when I first got
+access to a computer, and so I decided
+to learn how to mod it. It took a few hours till I had my first
+element working (I didn't bother looking for tutorials because
+there probably aren't any) and it was... Interesting.
 
-To use online features such as saving, you need to [register an account](https://powdertoy.co.uk/Register.html).
-You can also visit [the official TPT forum](https://powdertoy.co.uk/Discussions/Categories/Index.html).
+## Plans for the mod
 
-Have you ever wanted to blow something up? Or maybe you always dreamt of operating an atomic power plant? Do you have a will to develop your own CPU? The Powder Toy lets you to do all of these, and even more!
+So far for plans regarding elements, I am planning these:
 
-The Powder Toy is a free physics sandbox game, which simulates air pressure and velocity, heat, gravity and a countless number of interactions between different substances! The game provides you with various building materials, liquids, gases and electronic components which can be used to construct complex machines, guns, bombs, realistic terrains and almost anything else. You can then mine them and watch cool explosions, add intricate wirings, play with little stickmen or operate your machine. You can browse and play thousands of different saves made by the community or upload your own – we welcome your creations!
+- [x] *Ozone* - Kills virus upon contact. Condenses into Liquid Ozone at -112C and turns into Oxygen when at -100 pressure. And vice versa, oxygen at 100 pressure turns into ozone.
 
-There is a Lua API – you can automate your work or even make plugins for the game. The Powder Toy is free and the source code is distributed under the GNU General Public License, so you can modify the game yourself or help with development.
+- [ ] *Neptunium* - Super efficient fuel for nuclear reactors. Goes supercritical slower than plutonium while generating much more temparature.
 
-Build instructions
-===========================================================================
+- [ ] *Neon* - Noble gas that glows when sparked or under pressure. Can be painted with decoration color, which also colors photons.
 
-See the _Powder Toy Development Help_ section [on the main page of the wiki](https://powdertoy.co.uk/Wiki/W/Main_Page.html).
+- [ ] *Chloride* - In powdered and solid form, upon contact with water, it turns it into chlorified water which destroy plant.
 
-Special Thanks
-===========================================================================
+- [ ] *Accumulator* - Chargeable battery. Charge it through **PSCN**, and when at max energy, will output to **NSCN** only.
 
-* Stanislaw K Skowronek - Designed the original Powder Toy
-* Simon Robertshaw - Wrote the website, current server owner
-* Skresanov Savely
-* Pilihp64
-* Catelite
-* Victoria Hoyle
-* Nathan Cousins
-* jacksonmj
-* Felix Wallin
-* Lieuwe Mosch
-* Anthony Boot
-* Me4502
-* MaksProg
-* jacob1
-* mniip
-* LBPHacker
+- [ ] *Powered Black Hole* - Activate with **PSCN** to make it behave like black hole, disable with **NSCN**.
 
-Libraries and other assets used
-===========================================================================
+- [ ] *Powered Toggle Hole* - When activated with **PSCN**, acts like a black hole, when disabled with **NSCN**, behaves like a white hole.
 
-* [bzip2](http://www.bzip.org/)
-* [FFTW](http://fftw.org/)
-* [JsonCpp](https://github.com/open-source-parsers/jsoncpp)
-* [libcurl](https://curl.se/libcurl/)
-* [libpng](http://www.libpng.org/pub/png/libpng.html)
-* [Lua](https://www.lua.org/)
-* [LuaJIT](https://luajit.org/)
-* [Mallangche](https://github.com/JammPark/Mallangche)
-* [mbedtls](https://www.trustedfirmware.org/projects/mbed-tls/)
-* [SDL](https://libsdl.org/)
+- [ ] *Aluminium* - Brittle metal, worse conductor, but blocks protons and cools down quickly.
 
-Instructions
-===========================================================================
+- [ ] *Super Acid* - Extremely corrosive liquid, can eat through glass.
 
-Click on the elements with the mouse and draw in the field, like in MS Paint. The rest of the game is learning what happens next.
+- [ ] *Langton's Ant* - Cellular automaton with simple rules. Because why not?
 
-Controls
-===========================================================================
+- [ ] *Pressure Pulse Generator* - Generates pressure pulses. Set temparature to what the pressure level should be generated, and set life to frames between pulses.
 
-| Key                     | Action                                                          |
-| ----------------------- | --------------------------------------------------------------- |
-| TAB                     | Switch between circle/square/triangle brush                     |
-| Space                   | Pause                                                           |
-| Q / Esc                 | Quit                                                            |
-| Z                       | Zoom                                                            |
-| S                       | Save stamp (use with Ctrl when STK2 is out)                     |
-| L                       | Load last saved stamp                                           |
-| K                       | Stamp library                                                   |
-| 0-9                     | Set view mode                                                   |
-| P / F2                  | Save screenshot as .png                                         |
-| E                       | Bring up element search                                         |
-| F                       | Pause and step to next frame                                    |
-| G                       | Increase grid size                                              |
-| Shift + G               | Decrease grid size                                              |
-| H                       | Show/Hide HUD                                                   |
-| Ctrl + H / F1           | Show intro text                                                 |
-| D / F3                  | Debug mode (use with Ctrl when STK2 is out)                     |
-| I                       | Invert Pressure and Velocity map                                |
-| W                       | Cycle gravity modes (use with Ctrl when STK2 is out)            |
-| Y                       | Cycle air modes                                                 |
-| Ctrl + E                | Cycle edge modes                                                |
-| B                       | Enter decoration editor menu                                    |
-| Ctrl + B                | Toggle decorations on/off                                       |
-| N                       | Toggle Newtonian Gravity on/off                                 |
-| U                       | Toggle ambient heat on/off                                      |
-| Ctrl + I                | Install powder toy, for loading saves/stamps by double clicking |
-| Backtick                | Toggle console                                                  |
-| =                       | Reset pressure and velocity map                                 |
-| Ctrl + =                | Reset Electricity                                               |
-| \[                      | Decrease brush size                                             |
-| \]                      | Increase brush size                                             |
-| Alt + \[                | Decrease brush size by 1                                        |
-| Alt + \]                | Increase brush size by 1                                        |
-| Ctrl + C/V/X            | Copy/Paste/Cut                                                  |
-| Ctrl + Z                | Undo                                                            |
-| Ctrl + Y                | Redo                                                            |
-| Ctrl + Cursor drag      | Rectangle                                                       |
-| Shift + Cursor drag     | Line                                                            |
-| Middle click            | Sample element                                                  |
-| Alt + Left click        | Sample element                                                  |
-| Mouse scroll            | Change brush size                                               |
-| Ctrl + Mouse scroll     | Change vertical brush size                                      |
-| Shift + Mouse scroll    | Change horizontal brush size                                    |
-| Shift + R               | Horizontal mirror for selected area when pasting stamps         |
-| Ctrl + Shift + R        | Vertical mirror for selected area when pasting stamps           |
-| R                       | Rotate selected area counterclockwise when pasting stamps       |
-| F11                     | Toggle fullscreen                                               |
+I also plan on adding a new element property: *Heat capacity*. When an element transfers heat, the other element that is accepting the heat will only take some of the heat. Basically, for element B with a heat capacity of 0.5 (interval [0.0,1.0]), will change its temperature by heat recieved from element A times heat capacity of element B. Sounds good in my head but I gotta think about if it's actually worth adding and if I want to define heat capacities for all the elements lol.
 
-Command Line
----------------------------------------------------------------------------
+Elements will be done in no particular order and I will add many more other stuff. As with keeping up with game updates, I'll probably catch up only with major updates that add elements.
 
-| Command               | Description                                      | Example                                     |
-| --------------------- | ------------------------------------------------ | --------------------------------------------|
-| `scale:SIZE`          | Change window scale factor                       | `scale:2`                                   |
-| `kiosk`               | Fullscreen mode                                  |                                             |
-| `proxy:SERVER[:PORT]` | Proxy server to use                              | `proxy:wwwcache.lancs.ac.uk:8080`           |
-| `open FILE`           | Opens the file as a stamp or game save           |                                             |
-| `ddir DIRECTORY`      | Directory used for saving stamps and preferences |                                             |
-| `ptsave:SAVEID`       | Open online save, used by ptsave: URLs           | `ptsave:2198`                               |
-| `disable-network`     | Disables internet connections                    |                                             |
-| `disable-bluescreen`  | Disable bluescreen handler                       |                                             |
-| `redirect`            | Redirects output to stdout.txt / stderr.txt      |                                             |
-| `console`             | Redirects output to a new console on Windows     |                                             |
-| `cafile:CAFILE`       | Set certificate bundle path                      | `cafile:/etc/ssl/certs/ca-certificates.crt` |
-| `capath:CAPATH`       | Set certificate directory path                   | `capath:/etc/ssl/certs`                     |
+## Compiling and running
+
+For that you should consult [this page](https://powdertoy.co.uk/Wiki/W/Building_TPT_with_Meson.html). I got it running with minimal issues, but if you do have issues, open up an Issue on this repo and I'll look into it. Of course if an error shows up you should first check out the TPT wiki and all their resources so that you know if it's an issue with my mod or all the other code.
+
+## Pre built binaries / EXE file?
+
+No. I am not a well known and trusted developer, therefore I will not be providing executables because
+who would download random EXEs from some random person on the internet? In fact that's why I keep my mod code open here on GitHub, so you can inspect all the code I push and be sure that what you are about compile is safe.
+
+That's all for now. Enjoy or study my mod, I don't care, FOSS rules, peace out
