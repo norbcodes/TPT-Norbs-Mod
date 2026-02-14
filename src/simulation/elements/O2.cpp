@@ -79,6 +79,12 @@ static int update(UPDATE_FUNC_ARGS)
 			}
 		}
 	}
+	if (sim->pv[y/CELL][x/CELL] > 100.0f)
+	{
+		sim->kill_part(i);
+		sim->create_part(i, x, y, PT_OZON);
+		return -1;
+	}
 	if (parts[i].temp > 9973.15 && sim->pv[y/CELL][x/CELL] > 250.0f)
 	{
 		auto gravx = sim->gravOut.forceX[Vec2{ x, y } / CELL];

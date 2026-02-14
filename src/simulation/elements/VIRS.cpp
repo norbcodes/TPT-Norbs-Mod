@@ -105,6 +105,11 @@ int Element_VIRS_update(UPDATE_FUNC_ARGS)
 						sim->kill_part(ID(r));
 					return 0;
 				}
+				else if (TYP(r) == PT_OZON || TYP(r) == PT_LOZN)
+				{
+					parts[i].tmp3 += 15;
+					return 0;
+				}
 				else if (TYP(r) == PT_PLSM)
 				{
 					if (surround_space && sim->rng.chance(10 + int(sim->pv[(y+ry)/CELL][(x+rx)/CELL]), 100))
