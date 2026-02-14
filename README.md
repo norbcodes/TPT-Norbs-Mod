@@ -30,7 +30,13 @@ So far for plans regarding elements, I am planning these:
 
 - [ ] *Langton's Ant* - Cellular automaton with simple rules. Because why not?
 
-- [ ] *Pressure Pulse Generator* - Generates pressure pulses. Set temparature to what the pressure level should be generated, and set life to frames between pulses.
+- [ ] *Pressure Pulse Generator* - Generates pressure pulses. Set temparature to what the pressure level should be generated, and set life to set frames between pulses.
+
+- [ ] *Deco Color Sensor* - Outputs a spark if this sensors' life property matches the deco color of a nearby pixels (checks in all 8 directions).
+
+- [ ] *Tmp Sensor & Tmp2 Sensor* - Outputs a spark if the sensors' Tmp/Tmp2 property matches the Tmp/Tmp2 property of nearby pixels (checks in all 8 directions).
+
+- [ ] *Anti-Water* - Anti-gravity water.
 
 I also plan on adding a new element property: *Heat capacity*. When an element transfers heat, the other element that is accepting the heat will only take some of the heat. Basically, for element B with a heat capacity of 0.5 (interval [0.0,1.0]), will change its temperature by heat recieved from element A times heat capacity of element B. Sounds good in my head but I gotta think about if it's actually worth adding and if I want to define heat capacities for all the elements lol.
 
