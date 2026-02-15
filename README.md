@@ -12,7 +12,7 @@ So far for plans regarding elements, I am planning these:
 
 - [x] *Ozone* - Kills virus upon contact. Condenses into Liquid Ozone at -112C and turns into Oxygen when at -100 pressure. And vice versa, oxygen at 100 pressure turns into ozone.
 
-- [ ] *Neptunium* - Super efficient fuel for nuclear reactors. Goes supercritical slower than plutonium while generating much more temparature.
+- [x] *Neptunium* - Super efficient fuel for nuclear reactors. Goes supercritical slower than plutonium while generating much more temparature.
 
 - [ ] *Neon* - Noble gas that glows when sparked or under pressure. Can be painted with decoration color, which also colors photons.
 
@@ -36,7 +36,7 @@ So far for plans regarding elements, I am planning these:
 
 - [ ] *Tmp Sensor & Tmp2 Sensor* - Outputs a spark if the sensors' Tmp/Tmp2 property matches the Tmp/Tmp2 property of nearby pixels (checks in all 8 directions).
 
-- [ ] *Anti-Water* - Anti-gravity water.
+- [x] *Anti-Water* - Anti-gravity water.
 
 I also plan on adding a new element property: *Heat capacity*. When an element transfers heat, the other element that is accepting the heat will only take some of the heat. Basically, for element B with a heat capacity of 0.5 (interval [0.0,1.0]), will change its temperature by heat recieved from element A times heat capacity of element B. Sounds good in my head but I gotta think about if it's actually worth adding and if I want to define heat capacities for all the elements lol.
 

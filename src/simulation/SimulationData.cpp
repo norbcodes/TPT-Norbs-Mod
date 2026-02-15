@@ -82,6 +82,7 @@ static std::vector<menu_section> LoadMenus()
 		{0xE056, String("Powered Materials"), 0, 1},
 		{0xE019, String("Sensors"), 0, 1},
 		{0xE062, String("Force"), 0, 1},
+		{0xE06F, String("Capybara Stuff"), 0, 1},
 		{0xE043, String("Explosives"), 0, 1},
 		{0xE045, String("Gases"), 0, 1},
 		{0xE044, String("Liquids"), 0, 1},

@@ -95,6 +95,38 @@ static int update(UPDATE_FUNC_ARGS)
 					Element_FIRE_update(UPDATE_FUNC_SUBCALL_ARGS);
 				}
 				break;
+
+			case PT_NPUM:
+			{
+				if (sim->rng.chance(pressureFactor, 5000))
+				{
+					if (sim->rng.chance(1, 8))
+					{
+						sim->create_part(ID(r), x+rx, y+ry, sim->rng.chance(2, 3) ? PT_LAVA : PT_URAN);
+						parts[ID(r)].temp = MAX_TEMP;
+						if (parts[ID(r)].type==PT_LAVA) {
+							parts[ID(r)].tmp = 100;
+							parts[ID(r)].ctype = PT_NPUM;
+						}
+						sim->pv[y/CELL][x/CELL] += 90.0f;
+						sim->hv[y/CELL][x/CELL] += 130.0f;
+					}
+					else
+					{
+						sim->create_part(ID(r), x+rx, y+ry, PT_NEUT);
+						parts[ID(r)].vx = 0.6f*parts[ID(r)].vx + parts[i].vx;
+						parts[ID(r)].vy = 0.6f*parts[ID(r)].vy + parts[i].vy;
+					}
+					sim->pv[y/CELL][x/CELL] += 20.0f;
+					Element_FIRE_update(UPDATE_FUNC_SUBCALL_ARGS);
+				}
+				else
+				{
+					parts[ID(r)].temp += 130.0f;
+				}
+				break;
+			}
+
 			case PT_DEUT:
 				if (sim->rng.chance(pressureFactor + 1 + (parts[ID(r)].life/100), 1000))
 				{
