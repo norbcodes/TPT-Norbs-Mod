@@ -6,7 +6,7 @@ void Element::Element_LOLZ()
 	Identifier = "DEFAULT_PT_LOLZ";
 	Name = "LOLZ";
 	Colour = 0x569212_rgb;
-	MenuVisible = 0;
+	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

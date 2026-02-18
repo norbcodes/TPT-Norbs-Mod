@@ -199,6 +199,7 @@ simulation_elem_names = [
 	'LOZN',
 	'AWTR',
 	'NPUM',
+	'PPG',
 ]
 
 simulation_elem_src = []

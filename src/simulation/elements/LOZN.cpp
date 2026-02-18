@@ -52,6 +52,6 @@ void Element::Element_LOZN()
 	this->HighTemperature = ITH;
 	this->HighTemperatureTransition = NT;
 
-    // Set fallback
+    // Set callback
     this->Update = LoznUpdate;
 }

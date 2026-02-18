@@ -5,7 +5,7 @@ void Element::Element_LOVE()
 	Identifier = "DEFAULT_PT_LOVE";
 	Name = "LOVE";
 	Colour = 0xFF30FF_rgb;
-	MenuVisible = 0;
+	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 
