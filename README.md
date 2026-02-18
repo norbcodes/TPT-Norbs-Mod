@@ -30,7 +30,7 @@ So far for plans regarding elements, I am planning these:
 
 - [ ] *Langton's Ant* - Cellular automaton with simple rules. Because why not?
 
-- [ ] *Pressure Pulse Generator* - Generates pressure pulses. Set temparature to what the pressure level should be generated, and set life to set frames between pulses.
+- [x] *Pressure Pulse Generator* - Generates pressure pulses. Set temparature to what the pressure level should be generated, and set life to set frames between pulses.
 
 - [ ] *Deco Color Sensor* - Outputs a spark if this sensors' life property matches the deco color of a nearby pixels (checks in all 8 directions).
 
