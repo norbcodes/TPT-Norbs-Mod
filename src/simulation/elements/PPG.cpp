@@ -21,7 +21,7 @@ void Element::Element_PPG()
     this->MenuSection = SC_FORCE;
     this->Enabled = 1;
     this->Description = "Pressure Pulse Generator. Set strength using 'temp' "
-                        "and set frames between pulse using 'tmp2'. Set 'tmp' to 1 for negative pressure.";
+                        "and set frequency using 'tmp2'. Set 'tmp' to 1 for negative pressure.";
     this->Properties = TYPE_SOLID | PROP_LIFE_DEC;
     this->CarriesTypeIn = 0;
 
